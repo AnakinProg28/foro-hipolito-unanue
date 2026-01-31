@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confesiones Hipólito Unanue</title>
+
+    <!-- Fonts: Outfit for a modern, premium feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="hero-logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h1 class="hero-title">Colegio Hipólito Unanue</h1>
+            <div class="hero-info">
+                <p>Bienvenido a confesiones HIPOLITO UNANUE un especaio donde uno puede compartir sus pensamientos,
+                    anécdotas o secretos de forma totalmente anónima.</p>
+            </div>
+            <div class="hero-disclaimer">
+                <p><i class="fa-solid fa-circle-exclamation"></i> Todo lo que se publique aquí no se responsabiliza el
+                    creado de la pagina</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="compose-section">
+                <div class="glass-card compose-card">
+                    <h2>Dejéalo salir...</h2>
+                    <form id="confession-form">
+                        <div class="input-wrapper">
+                            <textarea id="confession-text" placeholder="Escribe tu confesión aquí..." required
+                                maxlength="500"></textarea>
+                            <div class="char-count">0/500</div>
+                        </div>
+                        <div class="form-actions">
+                            <div class="tags-selector">
+                                <span class="tag-option active" data-tag="General">General</span>
+                                <span class="tag-option" data-tag="Amor">Amor</span>
+                                <span class="tag-option" data-tag="Secreto">Secreto</span>
+                                <span class="tag-option" data-tag="Barristas">Barristas</span>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <span>Confesar</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="feed-section">
+                <div class="feed-header">
+                    <h3>Confesiones Recientes</h3>
+                    <div class="sort-controls">
+                        <button class="sort-btn active" data-sort="new">Nuevas</button>
+                        <button class="sort-btn" data-sort="popular">Populares</button>
+                    </div>
+                </div>
+                <div id="confessions-feed" class="feed-grid">
+                    <!-- Confessions will be injected here via JS -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Confesiones Hipólito Unanue. Totalmente anónimo.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
